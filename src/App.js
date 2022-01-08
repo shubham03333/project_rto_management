@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./components/Footer";
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/pages/inc/Login";
+import Signup from "./components/pages/inc/Signup";
+import RegistrationForm from "./components/pages/inc/RegistrationForm";
+import UserHome from "./components/pages/userpages/UserHome";
+import AdminHome from "./components/pages/adminpages/AdminHome";
+import UserTable from "./components/tables/UserTable";
+import AdminLogin from "./components/pages/adminpages/Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/register" element={<RegistrationForm />} />
+          <Route path="/table" element={<UserTable />} />
+          <Route path="/userHome" element={<UserHome />} />
+          <Route path="/adminHome" element={<AdminHome />} />
+          <Route path="/adminLogin" element={<AdminLogin />} />
+          <Route path="/userTable" element={<UserTable />} />
+        </Routes>
+        <Footer />
+      </Router>
+      <ToastContainer theme="colored" />
     </div>
   );
 }
