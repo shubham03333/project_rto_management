@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import logo from "../assets/RTOLOGO.png";
 function Navbar() {
   const navigate = useNavigate();
   return (
@@ -9,8 +9,12 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            RTO LOGO
+            <img
+              src={logo}
+              style={{ width: "80px", height: "55px", borderRadius: "20%" }}
+            />
           </Link>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -40,8 +44,8 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/login">
-                  Customer Login
+                <Link className="nav-link " to="/UserTable">
+                  UserTable
                 </Link>
               </li>
               <li className="nav-item">
@@ -66,10 +70,11 @@ function Navbar() {
                 Search
               </button>
             </form> */}
-            <div className="d-flex">
+            <div className="d-flex ">
               <button
                 type="button"
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-secondary shadow-w-100"
+                // className="btn btn-bg-primary shadow-w-100"
                 onClick={() => navigate("/login")}
               >
                 User Login

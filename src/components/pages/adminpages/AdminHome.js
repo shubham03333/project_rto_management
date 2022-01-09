@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Home.css";
 import Service1 from "../../../assets/v-learners-license-services.png";
 import Service2 from "../../../assets/v-renewal-of-registration.png";
@@ -9,6 +9,7 @@ import Service5 from "../../../assets/puc1.png";
 import Service6 from "../../../assets/v-road-tax.png";
 
 function AdminHome() {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Our Services */}
@@ -110,11 +111,12 @@ function AdminHome() {
                   src={Service4}
                   className="w-80 border-bottom"
                   alt="services"
+                  onClick={() => navigate("/userTable")}
                 />
                 <div className="card-body">
                   <h6>Users Control</h6>
                   <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow">
+                  <Link to="/userTable" className="btn btn-info shadow">
                     More
                   </Link>
                 </div>

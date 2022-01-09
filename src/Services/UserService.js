@@ -7,21 +7,17 @@ class User {
     return axios.get(RTO_API_BASE_URL + "/user/search");
   }
 
-  //   createEmployee(employee) {
-  //     return axios.post(EMPLOYEE_API_BASE_URL, employee);
-  //   }
+  getUserById(userId) {
+    return axios.get(RTO_API_BASE_URL + "/user/" + userId);
+  }
 
-  //   getEmployeeById(employeeId) {
-  //     return axios.get(EMPLOYEE_API_BASE_URL + "/" + employeeId);
-  //   }
+  updateUser(user, userId) {
+    return axios.put(RTO_API_BASE_URL + "/user/" + userId, user);
+  }
 
-  //   updateEmployee(employee, employeeId) {
-  //     return axios.put(EMPLOYEE_API_BASE_URL + "/" + employeeId, employee);
-  //   }
-
-  // deleteUser(userId) {
-  //   return axios.delete(RTO_API_BASE_URL + "/" + userId);
-  // }
+  deleteUser(userId) {
+    return axios.delete(RTO_API_BASE_URL + "/user/" + userId);
+  }
 }
 
 export default new User();

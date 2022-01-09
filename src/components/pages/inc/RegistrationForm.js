@@ -44,9 +44,9 @@ const RegistrationForm = () => {
         role,
         blood_group,
       };
-      console.log(body);
-      console.log(aadhar_no);
-      console.log(mobile_no);
+      // console.log(body);
+      // console.log(aadhar_no);
+      // console.log(mobile_no);
       // url to call the api
       const url = `${URL}/user/register`;
       // console.log("register user called");
@@ -59,7 +59,7 @@ const RegistrationForm = () => {
         console.log(result);
         if (result["status"] == "success") {
           toast.success("Successfully signed up new user");
-
+          // upload();
           // navigate to the home page
           navigate("/login");
         } else {

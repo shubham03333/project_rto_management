@@ -33,7 +33,10 @@ function Home() {
                 />
                 <div className="card-body">
                   <h6>Drivers/ Learners License</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
+                  <p>
+                    To be able to legally drive a vehicle on Indian roads, you
+                    must hold a valid Licence.
+                  </p>
                   <Link to="/login" className="btn btn-info shadow">
                     More
                   </Link>
@@ -51,7 +54,11 @@ function Home() {
                 <div className="card-body">
                   {/* <ButtonBase></ButtonBase> */}
                   <h6>Vehicle Registration</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
+                  <p>
+                    If you are planning on buying a new vehicle, please note
+                    that you will be required to register it with your local
+                    RTO.
+                  </p>
                   <Link to="/login" className="btn btn-info shadow">
                     More
                   </Link>
@@ -68,7 +75,11 @@ function Home() {
                 />
                 <div className="card-body">
                   <h6>Transfer Ownership</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
+                  <p>
+                    When buying or selling a vehicle make sure to get the
+                    ownership of the vehicle transferred to the name of the
+                    buyer.
+                  </p>
                   <Link to="/login" className="btn btn-info shadow ">
                     More
                   </Link>
@@ -86,7 +97,10 @@ function Home() {
                 />
                 <div className="card-body">
                   <h6>Vehicle Permit</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
+                  <p>
+                    A Vehicle Permit is basically a certificate which allows
+                    your vehicle to travel from one place to another.
+                  </p>
                   <Link to="/login" className="btn btn-info shadow">
                     More
                   </Link>
@@ -103,10 +117,13 @@ function Home() {
               <h3 className="main-heading">RTO Management System</h3>
               <div className="underline mx-auto"></div>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                amet recusandae repudiandae vitae natus deleniti ut, earum
-                aperiam distinctio labore? Perferendis dolores in exercitationem
-                pariatur maiores et, vero saepe iste.
+                RTO (Regional Transport Office) system is an application that is
+                designed for the RTO for the process of registration of vehicles
+                and issuing driving license process RTO Management System –
+                License, LLR, Owner Ship Transfer based web Application. RTO
+                Information System is an online information source developed for
+                Road Transport Authority to facilitate the users in applying for
+                various licenses and registrations.
               </p>
               <Link to="/about" className="btn btn-warning shadow">
                 Read More

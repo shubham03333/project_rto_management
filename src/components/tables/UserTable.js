@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import UserService from "../../Services/UserService";
+import { useNavigate } from "react-router-dom";
 
 const UserTable = (props) => {
   const [user, setUser] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     UserService.getUser()
       .then((response) => {
@@ -22,18 +23,20 @@ const UserTable = (props) => {
     });
   };
 
+  const viewUser = (id) => {
+    navigate(`/view-user/${id}`);
+  };
+  const editUser = (id) => {
+    navigate(`/update-user/${id}`);
+  };
+
   console.log(user);
   const userList = user.map((obj) => {
     return (
       <div className="container align-content-center">
         <div className="col-md-12 ">
           <h2 className="text-center mt-3">Users List</h2>
-          {/* <div className="row">
-            <button className="btn btn-primary" onClick={this}>
- 
-          Add Employee
-        </button>
-          </div> */}
+
           <br></br>
           <div className="row">
             <table
@@ -58,7 +61,7 @@ const UserTable = (props) => {
                     <td> {user.address}</td>
                     <td>
                       <button
-                        // onClick={() => this.editEmployee(employee.id)}
+                        onClick={() => editUser(user.id)}
                         className="btn btn-info"
                       >
                         Update{" "}
@@ -72,7 +75,7 @@ const UserTable = (props) => {
                       </button>
                       <button
                         style={{ marginLeft: "10px" }}
-                        // onClick={() => this.viewEmployee(employee.id)}
+                        onClick={() => viewUser(user.id)}
                         className="btn btn-info"
                       >
                         View

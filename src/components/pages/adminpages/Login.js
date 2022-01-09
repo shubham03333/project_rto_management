@@ -41,23 +41,27 @@ const AdminLogin = () => {
           toast.success("Welcome to the application");
 
           const { id, name, role } = result["data"];
+          console.log("role " + role);
+          if (role === "user") {
+            console.log("inside if");
+            navigate("/userHome");
+          } else {
+            console.log("admin login");
+            navigate("/adminHome");
 
-          console.log(role);
-          console.log("admin login");
-          navigate("/adminHome");
-
-          // persist the logged in user's information for future use
-          sessionStorage["id"] = id;
-          sessionStorage["name"] = name;
-          sessionStorage["role"] = role;
-          sessionStorage["loginStatus"] = 1;
-          // if ("role" == "admin") {
-          //   navigate("/adminHome");
-          // } else {
-          //   navigate("/");
-          //   toast.warning("invalid credentials");
-          // }
-          // navigate to home component
+            // persist the logged in user's information for future use
+            sessionStorage["id"] = id;
+            sessionStorage["name"] = name;
+            sessionStorage["role"] = role;
+            sessionStorage["loginStatus"] = 1;
+            // if ("role" == "admin") {
+            //   navigate("/adminHome");
+            // } else {
+            //   navigate("/");
+            //   toast.warning("invalid credentials");
+            // }
+            // navigate to home component
+          }
         } else {
           toast.error("Invalid user name or password");
         }

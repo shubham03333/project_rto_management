@@ -8,20 +8,6 @@ import img3 from "./images/rickshaw.png";
 import img4 from "./images/truck.png";
 
 function CarAnimation() {
-  function liveCar() {
-    return (
-      <div>
-        <div className="car">
-          <img src={imgcar} />
-        </div>
-        <div className="wheel">
-          <img src={imgwheel} className="back-wheel" />
-          <img src={imgwheel} className="front-wheel" />
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="hero">
       <div className="highway"></div>

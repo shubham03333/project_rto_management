@@ -89,7 +89,10 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
               </Link>
               &emsp;
-              <Link to="#" className="facebook social">
+              <Link
+                to="https://www.facebook.com/profile.php?id=100025573611203"
+                className="facebook social"
+              >
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </Link>
               &emsp;

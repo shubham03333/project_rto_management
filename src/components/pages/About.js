@@ -22,9 +22,13 @@ function About() {
           <h5 className="main-heading">RTO Management System</h5>
           <div className="underline"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-            voluptatibus cum officia voluptatum explicabo, recusandae qui unde
-            vitae cumque dolor?
+            RTO (Regional Transport Office) system is an application that is
+            designed for the RTO for the process of registration of vehicles and
+            issuing driving license process RTO Management System – License,
+            LLR, Owner Ship Transfer based web Application. RTO Information
+            System is an online information source developed for Road Transport
+            Authority to facilitate the users in applying for various licenses
+            and registrations.
           </p>
         </div>
       </section>
