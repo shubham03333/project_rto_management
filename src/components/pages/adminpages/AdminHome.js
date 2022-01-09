@@ -81,6 +81,18 @@ function AdminHome() {
             </div>
             <div className="col-md-4 mt-4">
               <div className="card shadow sevice-card">
+                <img src={Service6} alt="services" />
+                <div className="card-body">
+                  <h6>TAX</h6>
+                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
+                  <Link to="/userHome" className="btn btn-info shadow">
+                    More
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mt-4">
+              <div className="card shadow sevice-card">
                 <img src={Service5} alt="services" />
                 <div className="card-body">
                   <h6>PUC Control</h6>
@@ -91,11 +103,16 @@ function AdminHome() {
                 </div>
               </div>
             </div>
+            <div className="col-md-4 mt-4"></div>
             <div className="col-md-4 mt-4">
               <div className="card shadow sevice-card">
-                <img src={Service6} alt="services" />
+                <img
+                  src={Service4}
+                  className="w-80 border-bottom"
+                  alt="services"
+                />
                 <div className="card-body">
-                  <h6>TAX Control</h6>
+                  <h6>Users Control</h6>
                   <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
                   <Link to="/userHome" className="btn btn-info shadow">
                     More
