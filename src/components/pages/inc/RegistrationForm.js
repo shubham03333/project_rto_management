@@ -50,7 +50,7 @@ const RegistrationForm = () => {
       // url to call the api
       const url = `${URL}/user/register`;
       // console.log("register user called");
-
+      // upload();
       // http method: post
       // body: contains the data to be sent to the API
       axios.post(url, body).then((response) => {
@@ -59,7 +59,7 @@ const RegistrationForm = () => {
         console.log(result);
         if (result["status"] == "success") {
           toast.success("Successfully signed up new user");
-          // upload();
+
           // navigate to the home page
           navigate("/login");
         } else {
@@ -77,7 +77,7 @@ const RegistrationForm = () => {
     const files = e.target.files;
     const formData = new FormData();
     formData.append("file", files[0]);
-    fetch("http://localhost:8080/uploadFile", {
+    fetch("http://localhost:8080/user/uploadFile", {
       method: "POST",
       body: formData,
     }).then((response) => {
@@ -301,6 +301,7 @@ const RegistrationForm = () => {
                     />
                   </div>
                   <label htmlFor="name">Upload photo</label>
+
                   <div className="input-group mb-3">
                     <input
                       type="file"
@@ -316,6 +317,9 @@ const RegistrationForm = () => {
                       Upload
                     </label>
                   </div>
+                  <p style={{ color: "red" }}>
+                    *upload image of size less than 4 mb
+                  </p>
                   <label htmlFor="name">Password</label>
                   <div className="input-group flex-nowrap ">
                     <span className="input-group-text" id="addon-wrapping">

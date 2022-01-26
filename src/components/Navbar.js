@@ -39,8 +39,8 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link " to="/contact">
-                  Contact
+                <Link className="nav-link " to="/complaint">
+                  Complaint
                 </Link>
               </li>
               <li className="nav-item">
@@ -54,9 +54,19 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                {/* <Link className="nav-link " to="/register">
-                  Registration
-                </Link> */}
+                <Link className="nav-link " to="/rcTable">
+                  rcTable
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link " to="/vtransferTable">
+                  VtransferTable
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link " to="/vehicleRegistration">
+                  VehicleRegistration
+                </Link>
               </li>
             </ul>
             {/* <form className="d-flex">

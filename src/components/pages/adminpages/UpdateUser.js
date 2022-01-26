@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router";
 import UserService from "../../../Services/UserService";
 
-const UpdateUser = (props) => {
+const UpdateRc = (props) => {
   const { id } = useParams();
   const [user, setUser] = useState([]);
 
@@ -15,7 +15,7 @@ const UpdateUser = (props) => {
   const [dob, setDob] = useState("");
   const [address, setAddress] = useState("");
   const [mobile_no, setmobile_no] = useState();
-  const [blood_group, setBlood_group] = useState("");
+  const [aadhar_no, setAadhar_no] = useState("");
 
   const navigate = useNavigate();
 
@@ -32,13 +32,13 @@ const UpdateUser = (props) => {
         setDob(user.dob);
         setAddress(user.address);
         setmobile_no(user.mobile_no);
-        setBlood_group(user.blood_group);
+        setAadhar_no(user.aadhar_no);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
-  const updateUserm = (e) => {
+  const UpdateUser = (e) => {
     e.preventDefault();
     let user = {
       name: name,
@@ -47,7 +47,7 @@ const UpdateUser = (props) => {
       dob: dob,
       address: address,
       mobile_no: mobile_no,
-      blood_group: blood_group,
+      aadhar_no: aadhar_no,
     };
     console.log("user => " + JSON.stringify(user));
     console.log("id => " + JSON.stringify(id));
@@ -138,7 +138,7 @@ const UpdateUser = (props) => {
 
                 <div className="col-md-6 border-start gender">
                   <hr />
-                  <label htmlFor="name">Blood Group</label>
+                  <label htmlFor="name">Aadhar no</label>
                   <div className="input-group flex-nowrap mt-2">
                     <span className="input-group-text" id="addon-wrapping">
                       <i className="zmdi zmdi-bookmark"></i>
@@ -149,7 +149,7 @@ const UpdateUser = (props) => {
                       // aria-describedby="addon-wrapping"
                       autoComplete="off"
                       readOnly
-                      value={blood_group}
+                      value={aadhar_no}
                     />
                   </div>{" "}
                   <label htmlFor="name">Address</label>
@@ -179,13 +179,13 @@ const UpdateUser = (props) => {
                     />
                   </div>
                   <div
-                    class="btn-group mt-3"
+                    className="btn-group mt-3"
                     role="group"
                     aria-label="Basic mixed styles example"
                   >
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       style={{ marginRight: "20%", borderRadius: "10px" }}
                       onClick={() => navigate("/userTable")}
                     >
@@ -194,9 +194,9 @@ const UpdateUser = (props) => {
 
                     <button
                       type="button"
-                      class="btn btn-success"
+                      className="btn btn-success"
                       style={{ borderRadius: "10px" }}
-                      onClick={updateUserm}
+                      onClick={UpdateUser}
                     >
                       Update
                     </button>
@@ -211,4 +211,4 @@ const UpdateUser = (props) => {
   );
 };
 
-export default UpdateUser;
+export default UpdateRc;

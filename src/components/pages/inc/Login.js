@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { URL } from "../../../config";
-
+import Footer from "../../Footer";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,8 +46,9 @@ const Login = () => {
           // persist the logged in user's information for future use
           sessionStorage["id"] = id;
           sessionStorage["name"] = name;
-          sessionStorage["loginStatus"] = 1;
-
+          // sessionStorage["loginStatus"] = 1;
+          console.log(name);
+          console.log(id);
           // navigate to home component
           navigate("/userHome");
         } else {
@@ -63,8 +64,13 @@ const Login = () => {
         <div className="col-md-5">
           <h1>RTO Management System</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ad
-            alias nesciunt quas culpa veniam voluptates nostrum ducimus ut in.
+            RTO (Regional Transport Office) system is an application that is
+            designed for the RTO for the process of registration of vehicles and
+            issuing driving license process RTO Management System – License,
+            LLR, Owner Ship Transfer based web Application. RTO Information
+            System is an online information source developed for Road Transport
+            Authority to facilitate the users in applying for various licenses
+            and registrations.
           </p>
         </div>
 
@@ -89,47 +95,7 @@ const Login = () => {
                 setPassword(e.target.value);
               }}
             />
-            {/* <div className="col-md-2 justify">
-              <label className="role">Role</label>
-              <div className="form-check ">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="role"
-                  id="exampleRadios1"
-                  value="admin"
-                  
-                  // defaultChecked
-                  onChange={(e) => {
-                    setRole(e.target.value);
-                  }}
-                />
-                <label
-                  className="form-check-label radiog "
-                  htmlFor="exampleRadios1"
-                >
-                  Admin
-                </label>
-              </div>
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="role"
-                  value="user"
-                  id="exampleRadios2"
-                  onChange={(e) => {
-                    setRole(e.target.value);
-                  }}
-                />
-                <label
-                  className="form-check-label radiog"
-                  htmlFor="exampleRadios2"
-                >
-                  User
-                </label>
-              </div>
-            </div> */}
+
             <input
               type="submit"
               className="btn btn-primary button form-control"
@@ -147,6 +113,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 };

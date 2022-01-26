@@ -59,6 +59,17 @@
     display: none !important;
   }
 }
+@media (min-width: 1700px) {
+  .livecar {
+    display: none !important;
+  }
+  .back-wheel {
+    display: none !important;
+  }
+  .front-wheel {
+    display: none !important;
+  }
+}
 
 .car {
   width: 250px;
@@ -195,3 +206,7 @@
     transform: translateX(-2000px);
   }
 }
+
+/* .utable .yellow {
+  display: none;
+} */

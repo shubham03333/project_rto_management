@@ -35,7 +35,7 @@ function Home() {
                   <h6>Drivers/ Learners License</h6>
                   <p>
                     To be able to legally drive a vehicle on Indian roads, you
-                    must hold a valid Licence.
+                    must hold a valid Driving Licence.
                   </p>
                   <Link to="/login" className="btn btn-info shadow">
                     More
@@ -56,8 +56,7 @@ function Home() {
                   <h6>Vehicle Registration</h6>
                   <p>
                     If you are planning on buying a new vehicle, please note
-                    that you will be required to register it with your local
-                    RTO.
+                    that you will be required to register it.
                   </p>
                   <Link to="/login" className="btn btn-info shadow">
                     More
@@ -77,8 +76,7 @@ function Home() {
                   <h6>Transfer Ownership</h6>
                   <p>
                     When buying or selling a vehicle make sure to get the
-                    ownership of the vehicle transferred to the name of the
-                    buyer.
+                    ownership of the vehicle transferred.
                   </p>
                   <Link to="/login" className="btn btn-info shadow ">
                     More

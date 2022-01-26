@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 p {
   font-size: 14px;
   color: #262626;
@@ -60,4 +64,8 @@ li {
   to {
     transform: translateY(-2px);
   }
+}
+
+.yellow {
+  margin-bottom: 0;
 }

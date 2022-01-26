@@ -7,6 +7,7 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
 export default function Footer() {
   let footerStyle = {
     position: "relative",
@@ -89,12 +90,12 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
               </Link>
               &emsp;
-              <Link
-                to="https://www.facebook.com/profile.php?id=100025573611203"
+              <a
+                href="https://www.facebook.com/profile.php?id=100025573611203"
                 className="facebook social"
               >
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
-              </Link>
+              </a>
               &emsp;
               <Link to="#" className="twitter social">
                 <FontAwesomeIcon icon={faTwitter} size="2x" />

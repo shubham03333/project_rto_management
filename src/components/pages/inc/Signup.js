@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { URL } from "../../../config";
 import { toast } from "react-toastify";
+import Footer from "../../Footer";
 // import CarAnimation from "./caranimation/CarAnimation";
 const Signup = () => {
   const [name, setName] = useState("");
@@ -154,6 +155,7 @@ const Signup = () => {
           </div>
         </div>
       </section>
+      {/* <Footer /> */}
     </div>
   );
 };

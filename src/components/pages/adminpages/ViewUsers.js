@@ -50,7 +50,7 @@ const ViewUser = (props) => {
                     />
                   </div>
 
-                  <label htmlFor="name">aadhar_no Number</label>
+                  <label htmlFor="name">Aadhar Number</label>
                   <div className="input-group flex-nowrap mt-2">
                     <span className="input-group-text" id="addon-wrapping">
                       <i className="zmdi zmdi-account-box-mail"></i>
@@ -134,7 +134,7 @@ const ViewUser = (props) => {
                     <input
                       type="email"
                       className="form-control"
-                      placeholder="email"
+                      placeholder=""
                       aria-label="email"
                       aria-describedby="addon-wrapping"
                       value={user.gender}

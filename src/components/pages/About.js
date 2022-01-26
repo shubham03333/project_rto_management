@@ -1,5 +1,6 @@
 import React from "react";
 import Vmc from "./inc/Vmc";
+import Footer from "../Footer";
 function About() {
   return (
     <div>
@@ -34,6 +35,7 @@ function About() {
       </section>
       {/* Our vison, mission and values */}
       {<Vmc />}
+      {/* <Footer /> */}
     </div>
   );
 }

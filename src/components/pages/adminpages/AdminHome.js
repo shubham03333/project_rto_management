@@ -12,6 +12,7 @@ function AdminHome() {
   const navigate = useNavigate();
   return (
     <div>
+    
       {/* Our Services */}
       <section className="section  border-top">
         <div className="container">
@@ -20,92 +21,125 @@ function AdminHome() {
               <h3 className="main-heading">Admin Home</h3>
               <div className="underline mx-auto"></div>
             </div>
-            <div className="col-md-4 mt-2">
+            <div className="col-md-3 mt-2">
               <div className="card shadow sevice-card">
-                <img src={Service1} alt="services" />
+                <img
+                  src={Service1}
+                  alt="services"
+                  onClick={() => navigate("/dlTable")}
+                />
                 <div className="card-body">
                   <h6>Drivers License Control </h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow">
+                  <p></p>
+                  <Link to="/dlTable" className="btn btn-info shadow">
                     More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-2">
+            <div className="col-md-3 mt-2">
               <div className="card shadow sevice-card">
                 <img
                   src={Service2}
                   className="w-80 border-bottom"
                   alt="services"
+                  onClick={() => navigate("/rcTable")}
                 />
                 <div className="card-body">
                   <h6>Vehicle Registration Control</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow">
+                  <p></p>
+                  <Link to="/rcTable" className="btn btn-info shadow">
                     More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-2">
+            <div className="col-md-3 mt-2">
               <div className="card shadow sevice-card">
                 <img
                   src={Service3}
                   className="w-80 border-bottom"
                   alt="services"
+                  onClick={() => navigate("/vtransferTable")}
                 />
                 <div className="card-body">
                   <h6>Ownership Transfer Control</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow ">
+                  <p></p>
+                  <Link to="/vtransferTable" className="btn btn-info shadow ">
                     More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-4">
+            <div className="col-md-3 mt-2">
               <div className="card shadow sevice-card">
                 <img
                   src={Service4}
                   className="w-80 border-bottom"
                   alt="services"
+                  onClick={() => navigate("/permitTable")}
                 />
                 <div className="card-body">
                   <h6>Vehicle Permit Control</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow">
+                  <p></p>
+                  <Link to="/permitTable" className="btn btn-info shadow">
                     More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-4">
+            <div className="col-md-3 mt-4">
               <div className="card shadow sevice-card">
-                <img src={Service6} alt="services" />
+                <img
+                  src={Service1}
+                  className="w-80 border-bottom"
+                  alt="services"
+                  onClick={() => navigate("/LLTable")}
+                />
                 <div className="card-body">
-                  <h6>TAX</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow">
+                  <h6>Learning Licence Control</h6>
+                  <p></p>
+                  <Link to="/LLTable" className="btn btn-info shadow">
                     More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-4">
+            <div className="col-md-3 mt-4">
               <div className="card shadow sevice-card">
-                <img src={Service5} alt="services" />
+                <img
+                  src={Service6}
+                  alt="services"
+                  onClick={() => navigate("/complainTable")}
+                />
+                <div className="card-body">
+                  <h6>Complaints</h6>
+                  <p></p>
+                  <Link to="/complainTable" className="btn btn-info shadow">
+                    More
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-3 mt-4">
+              <div className="card shadow sevice-card">
+                <img
+                  src={Service5}
+                  alt="services"
+                  onClick={() => navigate("/pucTable")}
+                />
                 <div className="card-body">
                   <h6>PUC Control</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
-                  <Link to="/userHome" className="btn btn-info shadow">
+                  <p></p>
+                  <Link to="/pucTable" className="btn btn-info shadow">
                     More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-md-4 mt-4"></div>
-            <div className="col-md-4 mt-4">
+            {/* <div className="col-md-3 mt-4"></div> */}
+
+            <div className="col-md-3 mt-4">
               <div className="card shadow sevice-card">
                 <img
                   src={Service4}
@@ -115,7 +149,7 @@ function AdminHome() {
                 />
                 <div className="card-body">
                   <h6>Users Control</h6>
-                  <p>amet recusandae repudiandae vitae natus deleniti ut,</p>
+                  <p></p>
                   <Link to="/userTable" className="btn btn-info shadow">
                     More
                   </Link>
